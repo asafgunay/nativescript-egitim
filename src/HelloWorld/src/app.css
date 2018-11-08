@@ -18,3 +18,13 @@ components that have the btn class name.
 .btn {
     font-size: 18;
 }
+@keyframes spin {
+    from { transform: rotate(0); }
+    to { transform: rotate(360); }
+}
+Image {
+    animation-name: spin; 
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
