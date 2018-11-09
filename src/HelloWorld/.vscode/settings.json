@@ -12,5 +12,10 @@
   },
   "editor.tabSize": 2,
   "cSpell.enabled": false,
-  "editor.formatOnSave": false
+  // turn off default vs code formatter
+  "html.format.enable": false,
+  // enable formatting by default
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": true,
+  "prettier.singleQuote": false
 }
