@@ -10,6 +10,10 @@
     "node_modules/codelyzer"
   ],
   "rules": {
+    "indent": [
+      true,
+      "tabs"
+    ],
     "array-type": [true, "generic"],
     "arrow-return-shorthand": true,
     "component-class-suffix": true,

@@ -60,6 +60,11 @@ Each component has 3 style files located in its folder:
 
 # Step By Step
 
+## 1. Login Screen
+### 1.1. Inputs
+### 1.2. CSS Styles
+### 1.3. CSS Styles
+### 1.4. Data Binding
 
 
 
