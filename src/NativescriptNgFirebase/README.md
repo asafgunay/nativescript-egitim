@@ -150,7 +150,7 @@ export class LoginComponent {}
 	font-weight: 600;
 	margin-bottom: 70;
 	text-align: center;
-	color: #d51a1a;
+	color: #2585f3;
 }
 
 .input-field {
@@ -168,7 +168,7 @@ export class LoginComponent {}
 .btn-primary {
 	height: 50;
 	margin: 30 5 15 5;
-	background-color: #d51a1a;
+	background-color: #2585f3;
 	border-radius: 5;
 	font-size: 20;
 	font-weight: 600;
@@ -190,10 +190,73 @@ export class LoginComponent {}
 ```
 
 ### 1.4. Routing and Module
+- update `app-routing.module.ts`
+```typescript
+import { NgModule } from "@angular/core";
+import { Routes } from "@angular/router";
+import { NativeScriptRouterModule } from "nativescript-angular/router";
+import { LoginComponent } from "./login/login.component";
 
+const routes: Routes = [
+	{ path: "", redirectTo: "/login", pathMatch: "full" },
+	{ path: "login", component: LoginComponent },
+	{ path: "cars", loadChildren: "~/app/cars/cars.module#CarsModule" }
+];
 
+@NgModule({
+	imports: [ NativeScriptRouterModule.forRoot(routes) ],
+	exports: [ NativeScriptRouterModule ]
+})
+export class AppRoutingModule {}
+```
+- and update `app.module.ts`
+
+```typescript
+import { NgModule, NO_ERRORS_SCHEMA } from "@angular/core";
+import { NativeScriptModule } from "nativescript-angular/nativescript.module";
+
+import { AppRoutingModule } from "./app-routing.module";
+import { AppComponent } from "./app.component";
+import { LoginComponent } from "./login/login.component";
+
+@NgModule({
+	bootstrap: [ AppComponent ],
+	imports: [ NativeScriptModule, AppRoutingModule ],
+	declarations: [ AppComponent, LoginComponent ],
+	schemas: [ NO_ERRORS_SCHEMA ]
+})
+export class AppModule {}
+```
 ### 1.4. Data Binding
+- import these modules inside `login/login.component.ts`
+```typescript
+import { Component, ElementRef, ViewChild } from "@angular/core";
+import { Router } from "@angular/router";
+import { Page } from "tns-core-modules/ui/page";
+import { User } from "../shared/user.model";
+```
+and add these codes in export class
 
+```typescript
+export class LoginComponent {
+	isLoggingIn = true;
+	user: User;
+	processing = false;
+	@ViewChild("password") password: ElementRef;
+	@ViewChild("confirmPassword") confirmPassword: ElementRef;
+
+	constructor(private page: Page, private router: Router) {
+		this.page.actionBarHidden = true;
+		this.user = new User();
+		// this.user.email = "foo2@foo.com";
+		// this.user.password = "foo";
+		// this.processing = true;
+	}
+	toggleForm() {
+		this.isLoggingIn = !this.isLoggingIn;
+	}
+}
+```
 
 
 
