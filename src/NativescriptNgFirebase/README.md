@@ -61,7 +61,7 @@ Each component has 3 style files located in its folder:
 # Step By Step
 
 ## 1. Login Screen
-- create `images` folder.
+- create `images` folder under src folder.
   - save your `logo.png` image inside.
 - create `login` folder
   - `login.component.css`
