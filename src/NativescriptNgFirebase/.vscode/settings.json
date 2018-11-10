@@ -2,5 +2,12 @@
     "prettier.singleQuote": false,
     "prettier.useTabs": true,
     "prettier.tabWidth": 2,
-    "editor.tabSize": 2
+    "editor.tabSize": 2,
+    "files.exclude": {
+        "**/.git": true,
+        "**/*.js.map": true,
+        "**/*.js": true,
+        "**/CVS": true,
+        "**/.DS_Store": true
+    }
 }

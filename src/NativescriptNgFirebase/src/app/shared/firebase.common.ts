@@ -1,5 +1,5 @@
 import * as firebase from "nativescript-plugin-firebase";
-
+import { BackendService } from "./services/backend.service";
 import { Config } from "./config";
 
 /* ***********************************************************
@@ -17,7 +17,15 @@ export function initFirebase() {
 	firebase
 		.init({
 			persist: false,
-			storageBucket: Config.firebaseBucket
+			storageBucket: Config.firebaseBucket,
+			onAuthStateChanged: (data: any) => {
+				console.log(JSON.stringify(data));
+				if (data.loggedIn) {
+					BackendService.token = data.user.uid;
+				} else {
+					BackendService.token = "";
+				}
+			}
 		})
 		.then((instance) => console.log("firebase.init done"), (error) => console.log("firebase.init error: " + error));
 }
