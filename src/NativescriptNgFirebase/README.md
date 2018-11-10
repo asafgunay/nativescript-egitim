@@ -254,7 +254,26 @@ export class LoginComponent {
 	}
 	toggleForm() {
 		this.isLoggingIn = !this.isLoggingIn;
-	}
+  }
+   submit() {
+   }
+   login() {
+   }
+   register() {
+   }
+   forgotPassword() {
+   }
+   focusPassword() {
+   }
+   focusConfirmPassword() {
+   }
+   alert(message: string) {
+        return alert({
+            title: "APP NAME",
+            okButtonText: "OK",
+            message: message
+        });
+    }
 }
 ```
 
