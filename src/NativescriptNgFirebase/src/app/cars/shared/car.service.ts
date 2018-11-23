@@ -5,16 +5,7 @@ import { catchError } from "rxjs/operators";
 
 import { Car } from "./car.model";
 
-const editableProperties = [
-    "doors",
-    "imageUrl",
-    "luggage",
-    "name",
-    "price",
-    "seats",
-    "transmission",
-    "class"
-];
+const editableProperties = [ "doors", "imageUrl", "luggage", "name", "price", "seats", "transmission", "class" ];
 
 /* ***********************************************************
 * This is the master detail data service. It handles all the data operations
@@ -26,67 +17,67 @@ const editableProperties = [
 *************************************************************/
 @Injectable()
 export class CarService {
-    private static cloneUpdateModel(car: Car): object {
-        return editableProperties.reduce((a, e) => (a[e] = car[e], a), {}); // tslint:disable-line:ban-comma-operator
-    }
+	private static cloneUpdateModel(car: Car): object {
+		return editableProperties.reduce((a, e) => ((a[e] = car[e]), a), {}); // tslint:disable-line:ban-comma-operator
+	}
 
-    private _cars: Array<Car> = [];
+	private _cars: Array<Car> = [];
 
-    constructor(private _ngZone: NgZone) { }
+	constructor(private _ngZone: NgZone) {}
 
-    getCarById(id: string): Car {
-        if (!id) {
-            return;
-        }
+	getCarById(id: string): Car {
+		if (!id) {
+			return;
+		}
 
-        return this._cars.filter((car) => {
-            return car.id === id;
-        })[0];
-    }
+		return this._cars.filter((car) => {
+			return car.id === id;
+		})[0];
+	}
 
-    load(): Observable<any> {
-        return new Observable((observer: any) => {
-            const path = "cars";
+	load(): Observable<any> {
+		return new Observable((observer: any) => {
+			const path = "cars";
 
-            const onValueEvent = (snapshot: any) => {
-                this._ngZone.run(() => {
-                    const results = this.handleSnapshot(snapshot.value);
-                    observer.next(results);
-                });
-            };
-            firebase.addValueEventListener(onValueEvent, `/${path}`);
-        }).pipe(catchError(this.handleErrors));
-    }
+			const onValueEvent = (snapshot: any) => {
+				this._ngZone.run(() => {
+					const results = this.handleSnapshot(snapshot.value);
+					observer.next(results);
+				});
+			};
+			firebase.addValueEventListener(onValueEvent, `/${path}`);
+		}).pipe(catchError(this.handleErrors));
+	}
 
-    update(carModel: Car): Promise<any> {
-        const updateModel = CarService.cloneUpdateModel(carModel);
+	update(carModel: Car): Promise<any> {
+		const updateModel = CarService.cloneUpdateModel(carModel);
 
-        return firebase.update("/cars/" + carModel.id, updateModel);
-    }
+		return firebase.update("/cars/" + carModel.id, updateModel);
+	}
 
-    uploadImage(remoteFullPath: string, localFullPath: string): Promise<any> {
-        return firebase.storage.uploadFile({
-            localFullPath,
-            remoteFullPath,
-            onProgress: null
-        });
-    }
+	uploadImage(remoteFullPath: string, localFullPath: string): Promise<any> {
+		return firebase.storage.uploadFile({
+			localFullPath,
+			remoteFullPath,
+			onProgress: null
+		});
+	}
 
-    private handleSnapshot(data: any): Array<Car> {
-        this._cars = [];
+	private handleSnapshot(data: any): Array<Car> {
+		this._cars = [];
 
-        if (data) {
-            for (const id in data) {
-                if (data.hasOwnProperty(id)) {
-                    this._cars.push(new Car(data[id]));
-                }
-            }
-        }
+		if (data) {
+			for (const id in data) {
+				if (data.hasOwnProperty(id)) {
+					this._cars.push(new Car(data[id]));
+				}
+			}
+		}
 
-        return this._cars;
-    }
+		return this._cars;
+	}
 
-    private handleErrors(error: Response): Observable<never> {
-        return throwError(error);
-    }
+	private handleErrors(error: Response): Observable<never> {
+		return throwError(error);
+	}
 }

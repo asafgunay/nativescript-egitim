@@ -6,12 +6,8 @@ import { alert } from "tns-core-modules/ui/dialogs/dialogs";
 import "rxjs/add/operator/share";
 
 @Injectable()
-export class FirebaseService {
+export class UserService {
 	register(user: User) {
-		if (!this.validatePasswords) {
-			alert("Passwords not matched!");
-			return;
-		}
 		return firebase
 			.createUser({
 				email: user.email,
@@ -26,16 +22,8 @@ export class FirebaseService {
 				}
 			);
 	}
-	validatePasswords(user: User) {
-		if (user.confirmPassword === user.password) return true;
-		else return false;
-	}
 
 	login(user: User) {
-		if (!this.validatePasswords) {
-			alert("Passwords not matced!");
-			return;
-		}
 		return firebase
 			.login({
 				type: firebase.LoginType.PASSWORD,
