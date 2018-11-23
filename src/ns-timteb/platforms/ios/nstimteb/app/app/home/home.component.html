@@ -1,9 +1,14 @@
-<ActionBar class="action-bar">
-    <Label class="action-bar-title" text="Home"></Label>
+<ActionBar title="Elma" class="action-bar">
+	<ActionItem>
+		<StackLayout>
+			<Button class="fa" text="&#xf0c9;" fontSize="20" (tap)="onDrawerButtonTap()"></Button>
+		</StackLayout>
+	</ActionItem>
 </ActionBar>
 
-<GridLayout class="page">
-    <!-- Add your image tag here -->
+<GridLayout class="page page-content" tkMainContent>
+	<Label class="page-icon fa" text="&#xf015;"></Label>
+    <Label class="page-placeholder" text="Elma dönüyor"></Label>
     <StackLayout>
         <Image src="https://user-images.githubusercontent.com/544280/42960643-66d498ac-8b5a-11e8-8946-7224eefea6a5.jpg">
         </Image>
