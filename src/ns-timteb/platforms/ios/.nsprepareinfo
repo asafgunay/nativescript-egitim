@@ -1,0 +1,32 @@
+{
+	"time": "Fri Nov 23 2018 22:09:30 GMT+0300 (+03)",
+	"nativePlatformStatus": "1",
+	"bundle": false,
+	"release": false,
+	"changesRequireBuild": true,
+	"projectFileHash": "5d2838b68e47d1b677e7a4c934a1198e62d96a5092a22d64d1b61bc6fe2e868e",
+	"changesRequireBuildTime": "Fri Nov 23 2018 22:09:30 GMT+0300 (+03)",
+	"appFilesHashes": {
+		"/Users/asafdev/Sites/Egitim/nativescript-egitim/src/ns-timteb/src/app/app-routing.module.js": "54c384ea14dba50c09beca18e1e1f092cdb0c235",
+		"/Users/asafdev/Sites/Egitim/nativescript-egitim/src/ns-timteb/src/app/app-routing.module.ts": "d5d8ccdabfa58ae1726274bee5d64dc2553f7371",
+		"/Users/asafdev/Sites/Egitim/nativescript-egitim/src/ns-timteb/src/app/app.component.html": "611325f92aae874130d34a7621cbbd3eabd48aac",
+		"/Users/asafdev/Sites/Egitim/nativescript-egitim/src/ns-timteb/src/app/app.component.js": "dede6ac16970c718b7c1ed4944ab8fbc6b10164a",
+		"/Users/asafdev/Sites/Egitim/nativescript-egitim/src/ns-timteb/src/app/app.component.ts": "6f32091fe48b1ec7bcb22035237249748b41a9e6",
+		"/Users/asafdev/Sites/Egitim/nativescript-egitim/src/ns-timteb/src/app/app.module.js": "9e293f4a6abaf777e55c64ec7949fe9c9092daf1",
+		"/Users/asafdev/Sites/Egitim/nativescript-egitim/src/ns-timteb/src/app/app.module.ts": "9271ac674bd26fb06bd9e5ae52b81699c9ecb9b2",
+		"/Users/asafdev/Sites/Egitim/nativescript-egitim/src/ns-timteb/src/app/item/item-detail.component.html": "2c9a97a23d9f821152cb5ac1b8df850430311e63",
+		"/Users/asafdev/Sites/Egitim/nativescript-egitim/src/ns-timteb/src/app/item/item-detail.component.js": "22bb3f941ba70fd91990cebb453119a967d4acbe",
+		"/Users/asafdev/Sites/Egitim/nativescript-egitim/src/ns-timteb/src/app/item/item-detail.component.ts": "588fe7a3db57622eaae13d648bac45b0772b79cc",
+		"/Users/asafdev/Sites/Egitim/nativescript-egitim/src/ns-timteb/src/app/item/item.js": "b9a83debaf406289eaba08f24b96d43e80bac73e",
+		"/Users/asafdev/Sites/Egitim/nativescript-egitim/src/ns-timteb/src/app/item/item.ts": "4e3a8442509e3718272b1f19ee0897704b00b064",
+		"/Users/asafdev/Sites/Egitim/nativescript-egitim/src/ns-timteb/src/app/item/item.service.js": "aa0e142157a3aafd9827dfc82a303b3c2d4a92f9",
+		"/Users/asafdev/Sites/Egitim/nativescript-egitim/src/ns-timteb/src/app/item/item.service.ts": "dff3ed06292f426b78b3c52fa6357b0bcff8d570",
+		"/Users/asafdev/Sites/Egitim/nativescript-egitim/src/ns-timteb/src/app/item/items.component.js": "2317a12ba7d8a46034cd571fade5221794c99406",
+		"/Users/asafdev/Sites/Egitim/nativescript-egitim/src/ns-timteb/src/app/item/items.component.ts": "e14afc2ce9ca40bbc84988a38201c2097e768f8e",
+		"/Users/asafdev/Sites/Egitim/nativescript-egitim/src/ns-timteb/src/app.css": "24f81ff5c41798f4671899fdc9d85993fbf27059",
+		"/Users/asafdev/Sites/Egitim/nativescript-egitim/src/ns-timteb/src/app/item/items.component.html": "f0014a234479bb856155bc9979fcdd7eca710108",
+		"/Users/asafdev/Sites/Egitim/nativescript-egitim/src/ns-timteb/src/main.ts": "f91f1f60268600613f58424b2be0dc632a51a3d9",
+		"/Users/asafdev/Sites/Egitim/nativescript-egitim/src/ns-timteb/src/package.json": "62db8f086c6c89608370f1d52d8bcf671ce139db",
+		"/Users/asafdev/Sites/Egitim/nativescript-egitim/src/ns-timteb/src/main.js": "fa6ba2c09a97be4b4b3df5980c3f54c8030c3e3d"
+	}
+}
