@@ -1,0 +1,80 @@
+{
+  "_from": "tns-core-modules@~5.0.2",
+  "_id": "tns-core-modules@5.0.3",
+  "_inBundle": false,
+  "_integrity": "sha512-b2gGpCYeXQ4JbQG8GcneGMDCDRcXmSiGppUFb0SaGRDQ+JkFDtLMAsM3bn/OhMPRS9R6s4SyY0U2ikrQpLkNvw==",
+  "_location": "/tns-core-modules",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "range",
+    "registry": true,
+    "raw": "tns-core-modules@~5.0.2",
+    "name": "tns-core-modules",
+    "escapedName": "tns-core-modules",
+    "rawSpec": "~5.0.2",
+    "saveSpec": null,
+    "fetchSpec": "~5.0.2"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/tns-core-modules/-/tns-core-modules-5.0.3.tgz",
+  "_shasum": "801df50e2247de515f54cf5349ec6974a3e9da55",
+  "_spec": "tns-core-modules@~5.0.2",
+  "_where": "/Users/asafdev/Sites/Egitim/nativescript-egitim/src/ns-timteb",
+  "bundleDependencies": false,
+  "dependencies": {
+    "tns-core-modules-widgets": "next",
+    "tslib": "^1.9.3"
+  },
+  "deprecated": false,
+  "description": "Telerik NativeScript Core Modules",
+  "devDependencies": {
+    "@types/node": "~7.0.5",
+    "tns-platform-declarations": "*"
+  },
+  "files": [
+    "**/*.d.ts",
+    "**/*.js",
+    "**/platforms/ios/**",
+    "**/package.json",
+    "!android17.d.ts",
+    "!ios.d.ts",
+    "!bin/",
+    "!apps/",
+    "!build/",
+    "!node-tests/",
+    "!declarations.android.d.ts",
+    "!declarations.ios.d.ts",
+    "!gruntfile.js",
+    "!org.nativescript.widgets.d.ts"
+  ],
+  "homepage": "https://www.nativescript.org",
+  "license": "Apache-2.0",
+  "name": "tns-core-modules",
+  "nativescript": {
+    "platforms": {
+      "ios": "4.0.0",
+      "android": "4.0.0"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/NativeScript/NativeScript/commit/6daba6983cf89e2a284da33aae42cddd4dc7c6a6"
+  },
+  "scripts": {
+    "version": "conventional-changelog -p angular -i ../CHANGELOG.md -s && git add ../CHANGELOG.md"
+  },
+  "snapshot": {
+    "android": {
+      "tns-java-classes": {
+        "modules": [
+          "ui/frame/activity",
+          "ui/frame/fragment"
+        ]
+      }
+    }
+  },
+  "typings": "tns-core-modules.d.ts",
+  "version": "5.0.3"
+}

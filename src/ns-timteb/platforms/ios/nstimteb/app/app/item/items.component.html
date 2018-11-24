@@ -8,10 +8,10 @@
 
 <GridLayout class="page page-content" tkMainContent>
 	<Label class="page-icon fa" text="&#xf015;"></Label>
-    <Label class="page-placeholder" text="Ürünler"></Label>
+    <Label class="page-placeholder" text=""></Label>
     <ListView [items]="items" class="list-group">
         <ng-template let-item="item">
-            <Label [nsRouterLink]="['/item', item.id]" [text]="item.name"
+            <Label [nsRouterLink]="['/items/item-detail', item.id]" [text]="item.name"
                 class="list-group-item"></Label>
         </ng-template>
     </ListView>

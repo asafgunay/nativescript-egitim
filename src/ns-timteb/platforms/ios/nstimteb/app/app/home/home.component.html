@@ -1,9 +1,10 @@
 <ActionBar title="Elma" class="action-bar">
-	<ActionItem>
+	<!-- <ActionItem>
 		<StackLayout>
 			<Button class="fa" text="&#xf0c9;" fontSize="20" (tap)="onDrawerButtonTap()"></Button>
 		</StackLayout>
-	</ActionItem>
+	</ActionItem> -->
+    <NavigationButton icon="res://ic_arrow_back_black_24dp" (tap)="goBack()"></NavigationButton>
 </ActionBar>
 
 <GridLayout class="page page-content" tkMainContent>

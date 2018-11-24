@@ -1,0 +1,18 @@
+<ActionBar title="Ürünler" class="action-bar">
+        <ActionItem>
+            <StackLayout>
+                <Button class="fa" text="&#xf0c9;" fontSize="20" (tap)="onDrawerButtonTap()"></Button>
+            </StackLayout>
+        </ActionItem>
+    </ActionBar>
+    
+    <GridLayout class="page page-content" tkMainContent>
+        <Label class="page-icon fa" text="&#xf015;"></Label>
+        <Label class="page-placeholder" text="Ürünler"></Label>
+        <ListView [items]="items" class="list-group">
+            <ng-template let-item="item">
+                <Label [nsRouterLink]="['/items/item-detail', item.id]" [text]="item.name"
+                    class="list-group-item"></Label>
+            </ng-template>
+        </ListView>
+    </GridLayout>

@@ -1,4 +1,8 @@
-<ActionBar title="Details" class="action-bar"></ActionBar>
+<ActionBar title="{{item.name}}" class="action-bar">
+    <ActionItem ios.position="right" android.position="right" (tap)="onEditButtonTap()">
+        <Label text="Edit" class="action-item"></Label>
+    </ActionItem>
+</ActionBar>
 <FlexboxLayout flexDirection="column" class="page">
     <FlexboxLayout class="m-15">
         <Label class="h2" [text]="item.id + '. '"></Label>
